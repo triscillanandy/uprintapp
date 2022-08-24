@@ -1,0 +1,191 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title></title>
+      
+ 
+
+<div >
+
+  <section class>
+
+
+
+
+              <div class="signin-form">
+ <div">
+  
+  <form method="POST" class="form1">
+    {% csrf_token %}
+    
+    {% csrf_token %}
+    {% if form.errors %}
+    <p>Please fill</p>
+    {% for field in form %}
+    {% if field.errors %}
+    <div>
+       {{field.label}}: {{ field.errors }}
+    </div>
+   {% endif %}  
+   {% endfor %}
+   {% endif %}      
+   
+
+
+
+    
+    
+    
+    <p class="sign">Sign in</p>
+            <label for =>email</label>
+            <input type ="text" id="email" class="form-control" name="email" placeholder="enter your email" required> <br>
+            <label for =>Password</label>
+            <input type ="password" id="password"  class="form-control" name="password" placeholder="enter your password"  onclick="myFunction()" required> <br>
+            <script>
+              function myFunction() {
+                var x = document.getElementById("password2");
+                if (x.type === "password") {
+                 x.type = "password";
+                } else {
+                  x.type = "text";
+                  
+                  
+                }
+              }
+              </script>
+              
+  
+   
+    <button  class="loginbutton"  type="submit"> login</button>
+  
+  <br/>
+  <sub style="text-align: left;"><a href="{% url 'signup' %}" style="text-decoration: none; color: blue; padding:2%; cursor:pointer; margin-right:2%;">don't have account,sign up</a></sub>
+  </form>
+
+ </div>
+</section>
+
+</div>
+<style>
+  body{
+  background-color:  #6f42c1;
+}
+.form2{
+  margin: 0 auto;
+    width: 500px;
+    padding: 30px 25px;
+        background-color: #f9f9f9;
+        margin-top: 2%;
+          height:fit-content;
+}
+.form1 {
+
+    width:fit-content;
+    padding: 60px;
+    height:fit-content;
+    margin:0 auto;
+    margin-top: 2%;
+    background-color: #f9f9f9
+ }
+ .form-control {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+ }
+
+.loginbutton{
+ background-color: blue;
+ color: white;
+ border: none;
+ cursor: pointer;
+ width: 60%;
+ margin: 5px auto;
+ padding: 15px;
+     box-shadow: 0px 5px 5px #ccc;
+     border-radius: 5px;
+     border-top: 1px solid #e9e9e9;
+ display:block;
+ text-align:center;
+}
+.loginbutton2{
+ background-color: blue;
+
+ border: none;
+ cursor: pointer;
+ width: 60%;
+ margin: 5px auto;
+ padding: 15px;
+     box-shadow: 0px 5px 5px #ccc;
+     border-radius: 5px;
+     border-top: 1px solid #e9e9e9;
+ display:block;
+ text-align:center;
+}
+.ad{
+  color: white;
+}
+
+.loginbutton1{
+  color: #fff;
+    background: green;
+
+    width: 60%;
+    margin: 5px auto;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0px 5px 5px #ccc;
+    border-radius: 5px;
+    border-top: 1px solid #e9e9e9;
+display:block;
+text-align:center;
+}
+
+.h2{
+  text-align: center;
+  font-size:50px;
+
+}
+.link{
+  text-align: center;
+}
+.img{
+  border-radius: 50%;
+  width: 0%;
+  margin-left:auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
+.img1{
+  border-radius: 50%;
+  width:50%;
+  margin-left:auto;
+  margin-right: auto;
+  display: block;
+}
+span{
+  position:absolute;
+  right:15px;
+  transform:translate(0,-50%);
+  top:50%;
+  cursor: pointer;
+}
+.fa {
+  font-size:20px;
+  color:blue;
+}
+.sign{
+  font-size: 50px;
+}
+
+</style>
+</body>
+</html>
+
